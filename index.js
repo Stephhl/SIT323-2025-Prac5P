@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3040;
+const port = process.env.PORT || 3040;
 
 // Addition function
 const add= (n1,n2) => {
@@ -109,5 +109,5 @@ app.get("/divide", (req, res) => {
 
 // Starts server and listens on port 3040
 app.listen(port,()=> {
-    console.log("hello i'm listening to port " +port);
+    console.log("hello i'm listening to port " + port);
 })
